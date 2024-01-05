@@ -5,9 +5,9 @@ const bd = mysql.createPool({
     user: process.env.USER || process.env.USERD,
     password: process.env.PASS || process.env.PASSD,
     database: process.env.BD || process.env.BDD,
-    connectionLimit: 10, // Establecer el límite de conexiones
-    waitForConnections: true, // Permitir esperar si se alcanza el límite
-    acquireTimeout: 100000, // Establecer el tiempo de espera en milisegundos
+    // connectionLimit: 10, // Establecer el límite de conexiones
+    // waitForConnections: true, // Permitir esperar si se alcanza el límite
+    // acquireTimeout: 100000, // Establecer el tiempo de espera en milisegundos
 });
 
 // Manejar evento de adquisición de conexión

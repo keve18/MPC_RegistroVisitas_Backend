@@ -16,7 +16,7 @@ app.use(express.json());
 app.use('/api/registro', require('./src/routes/registro.router'));
 
 // PUERTO DONDE ESTÁ CORRIENDO EL BACKEND
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORTD || process.env.PORT || 3000;
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
