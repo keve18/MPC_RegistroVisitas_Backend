@@ -1,10 +1,10 @@
 const mysql = require('mysql2/promise');
 
 const bd = mysql.createPool({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASS,
-    database: process.env.BD,
+    host: process.env.HOST || process.env.HOSTD,
+    user: process.env.USER || process.env.USERD,
+    password: process.env.PASS || process.env.PASS,
+    database: process.env.BD || process.env.BDD,
     connectionLimit: 10, // Establecer el límite de conexiones
     waitForConnections: true, // Permitir esperar si se alcanza el límite
     acquireTimeout: 100000, // Establecer el tiempo de espera en milisegundos
